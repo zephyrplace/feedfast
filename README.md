@@ -1,5 +1,6 @@
 # feedfast \#
 
-Open-source and fast solution to receive your product feedback that helps you understand what your users need.
+Open-source solution to receive feedback, start to understand what your users really need.
 
+Feedback + Fast
 
