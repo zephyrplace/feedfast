@@ -5,6 +5,7 @@ import axios from 'axios';
 import Tutorial from './components/Tutorial';
 import Footer from './components/Footer';
 import EmptyIssues from './components/EmptyIssues';
+import Header from './components/Header';
 
 class App extends Component {
   constructor(props) {
@@ -14,9 +15,9 @@ class App extends Component {
     this.state = {
       issues: [],
       currentPage: 1,
-      owner: pathName[1],
-      repo: pathName[2],
-      label: pathName[3] || "feedfast",
+      owner: pathName[2],
+      repo: pathName[3],
+      label: pathName[4] || "feedfast",
     }
   }
 
@@ -48,10 +49,7 @@ class App extends Component {
       return (<div>
         <section className="section">
           <div className="container">
-            <header>
-              <h1 className="title is-1">feedfast</h1>
-              <h3 className="subtitle is-3">Product feedback solution that helps you understand what your users need.</h3>
-            </header>
+            <Header />
             <Tutorial />
           </div>
         </section>
@@ -62,10 +60,7 @@ class App extends Component {
       <div>
         <section className="section">
           <div className="container">
-            <header>
-              <h1 className="title is-1">feedfast</h1>
-              <h3 className="subtitle is-3">Product feedback solution that helps you understand what your users need.</h3>
-            </header>
+            <Header />
           </div>
         </section>
         <section className="section">
