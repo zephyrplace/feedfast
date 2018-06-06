@@ -17,7 +17,6 @@ const Tutorial = () => {
             <code>/feedfast/Microsoft/vscode/feature-request</code>
             <hr />
             <h1 className="title">See how it's easy! <i className="fas fa-rocket"></i></h1>
-
             <a href="/feedfast/Microsoft/vscode/feature-request">/feedfast/Microsoft/vscode/feature-request</a>
         </div>
     )
