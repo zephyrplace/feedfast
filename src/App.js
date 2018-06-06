@@ -10,14 +10,14 @@ import Header from './components/Header';
 class App extends Component {
   constructor(props) {
     super(props)
-    const pathName = window.location.pathname.split('/');
+    const pathName = window.location.hash.split('/');
     console.log(pathName)
     this.state = {
       issues: [],
       currentPage: 1,
-      owner: pathName[2],
-      repo: pathName[3],
-      label: pathName[4] || "feedfast",
+      owner: pathName[1],
+      repo: pathName[2],
+      label: pathName[3] || "feedfast",
     }
   }
 
