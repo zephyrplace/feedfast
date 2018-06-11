@@ -19,3 +19,7 @@ Go to https://zephyrplace.github.io/feedfast/
 _Congratulations!_
 
 Check it in: https://zephyrplace.github.io/feedfast/#/Microsoft/vscode/feature-request
+
+***
+
+![Zephyr Place](https://avatars0.githubusercontent.com/u/17429557?s=200&v=4)
