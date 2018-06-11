@@ -21,5 +21,4 @@ _Congratulations!_
 Check it in: https://zephyrplace.github.io/feedfast/#/Microsoft/vscode/feature-request
 
 ***
-
-![Zephyr Place](https://avatars0.githubusercontent.com/u/17429557?s=200&v=4)
+<img src="https://avatars0.githubusercontent.com/u/17429557?s=200&v=4" width="50"></img>
