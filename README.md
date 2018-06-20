@@ -20,5 +20,13 @@ _Congratulations!_
 
 Check it in: https://zephyrplace.github.io/feedfast/#/Microsoft/vscode/feature-request
 
+## How to contribute
+
+Feedfast is an interface to list all feature request issues created in a repository at Github, counting all heart's reactions making a rank to list the most wanted feature by your users.
+
+All PR that contribute to the main ideia are welcome 
+
+(:
+
 ***
 <img src="https://avatars0.githubusercontent.com/u/17429557?s=400&u=976dd858f521d574e3d01b4bf62f5c8ba0a928c0&v=4" width="50"></img>
