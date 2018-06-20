@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
 import './App.css';
-import Issue from './components/Issue';
+
 import axios from 'axios';
+
+import Issue from './components/Issue';
 import Tutorial from './components/Tutorial';
 import Footer from './components/Footer';
 import EmptyIssues from './components/EmptyIssues';
 import Header from './components/Header';
 
+import queryString from 'query-string';
+
+import store from 'store'
+
 class App extends Component {
   constructor(props) {
     super(props)
     const pathName = window.location.hash.split('/');
+    const searchParams = queryString.parse(window.location.search);
     console.log(pathName)
+    console.log(searchParams)
     this.state = {
       issues: [],
       currentPage: 1,
       owner: pathName[1],
       repo: pathName[2],
       label: pathName[3] || "feedfast",
+      authCode: searchParams.code
     }
   }
 
   componentDidMount = () => {
     this.loadData();
+    this.state.authCode && axios.post(`https://github.com/login/oauth/access_token?client_id=f790bf0ab834b73aac9e&client_secret=8dfe5380ecbddbc6e3a8a3244f53317ea5990f96&code=${this.state.authCode}`)
+      .then(response => {
+        console.log(response)
+        store.set('token', queryString.parse(response.data));
+      })
+      .catch(error => {
+        console.log(error)
+      });
   }
 
   componentWillUpdate = (nextProps, nextState) => {

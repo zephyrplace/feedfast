@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Lottie from 'react-lottie';
-import * as animationData from './animations/h2.json'
+import * as animationData from './animations/heart.json'
+import store from 'store'
 import axios from 'axios';
 
 class Issue extends Component {
@@ -40,10 +41,26 @@ class Issue extends Component {
         const { isStopped, isPaused, direction, speed, isLike } = this.state;
 
         const clickHandler = () => {
-            if (!isStopped) {
-                this.setState({ direction: direction * -1 });
+            const token = store.get('token');
+            if (token) {
+
+                if (!isStopped) {
+                    this.setState({ direction: direction * -1 });
+                }
+                this.setState({ isStopped: false, isLike: !isLike });
+                const url = `https://api.github.com/repos/${this.props.owner}/${this.props.repo}/issues/${this.props.issue.number}/reactions?access_token=${token.access_token}`;
+                axios.post(url, {
+                    content: 'heart'
+                }, { headers: { Accept: 'application/vnd.github.squirrel-girl-preview+json' } })
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            } else {
+                window.open("https://github.com/login/oauth/authorize?client_id=f790bf0ab834b73aac9e", "_self")
             }
-            this.setState({ isStopped: false, isLike: !isLike });
         };
 
         const defaultOptions = {

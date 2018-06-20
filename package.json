@@ -5,10 +5,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "query-string": "^6.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-lottie": "^1.1.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "store": "^2.0.12"
   },
   "scripts": {
     "predeploy": "npm run build",
