@@ -1,4 +1,4 @@
-# feedfast \# ![feedfast logo](https://raw.githubusercontent.com/zephyrplace/feedfast/master/public/favicon-32x32.png)
+![feedfast logo](https://raw.githubusercontent.com/zephyrplace/feedfast/master/src/assets/logotype.png)
 
 Open-source solution to receive feedback, start to understand what your users really need.
 
